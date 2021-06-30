@@ -11,7 +11,7 @@ bigcount = None
 bigword = None
 for word, count in list(counts.items()):
     if bigcount is None or count > bigcount:
-        bigword = words
+        bigword = word
         bigcount = count
 
 print(bigword, bigcount)
