@@ -3,4 +3,4 @@ s_rate = input('Enter Rate: ')
 hours = float(s_hours)
 rate = float(s_rate)
 pay = hours * rate
-print('Pay:', pay)
+print('Pay:', round(pay, 2))
