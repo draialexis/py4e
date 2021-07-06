@@ -42,5 +42,5 @@ elif choice.upper() == 'F':
 
     except:
         print('Invalid input -- please enter a number')
-else:
-    print('Invalid input -- please choose the conversion type you want')
+        
+else: print('Invalid input -- please choose the conversion type you want')
