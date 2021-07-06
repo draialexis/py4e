@@ -2,11 +2,20 @@ def warn_and_exit():
     print('Error, please enter numeric input')
     quit()
 
-s_hours = input('Enter Hours: ')
+def switch_comas(inp):
+    coma_pos = inp.find(',')
+    if not coma_pos == -1:
+        inp = inp.replace(',', '.')
+
+    return inp
+
+inp = input('Enter Hours: ')
+s_hours = switch_comas(inp)
 try: total_hours = float(s_hours)
 except: warn_and_exit()
 
-s_rate = input('Enter Rate: ')
+inp = input('Enter Rate: ')
+s_rate = switch_comas(inp)
 try: reg_rate = float(s_rate)
 except: warn_and_exit()
 
