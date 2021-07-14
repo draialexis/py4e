@@ -8,6 +8,7 @@ def find_and_print(str, delimitor):
         result = float(substr)
     except:
         print('Something went wrong: cannot convert to float')
+        quit()
     return result
 
 str = 'X-DSPAM-Confidence:0.8475'
