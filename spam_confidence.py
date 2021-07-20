@@ -15,17 +15,19 @@ count = 0
 spam_conf_avg = 0
 
 for line in fhand:
-    if line.startswith('X-DSPAM-Confidence:'):
-        start = line.find(' ')
-        snum = line[start+1:]
+    if not line.startswith('X-DSPAM-Confidence:'):
+        continue
 
-        try:
-            num = float(snum)
-        except:
-            print('something went wrong with', snum)
+    start = line.find('0')
+    snum = line[start:]
 
-        count = count + 1
-        spam_conf_total = spam_conf_total + num
+    try:
+        num = float(snum)
+    except:
+        print('something went wrong with', snum)
+
+    count = count + 1
+    spam_conf_total = spam_conf_total + num
 
 if count > 0 :
     spam_conf_avg = spam_conf_total / count
