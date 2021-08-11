@@ -1,4 +1,12 @@
-fhand = open('text_docs\words.txt')
+fname = input('Enter a file name: ')
+furl = 'text_docs\\' + fname + '.txt'
+
+try:
+    fhand = open(furl)
+except:
+    print('In the industry, we call that a woopsie')
+    quit()
+
 words = dict()
 
 for line in fhand:
