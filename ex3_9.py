@@ -10,7 +10,7 @@ except:
 emails = dict()
 
 for line in fhand:
-    if line.startswith('From'):
+    if line.startswith('From '):
         words = line.split()
         if len(words) >= 2:
             email = words[1]

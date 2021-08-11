@@ -10,7 +10,7 @@ except:
 days = dict()
 
 for line in fhand:
-    if line.startswith('From'):
+    if line.startswith('From '):
         words = line.split()
         if len(words) >= 3:
             day = words[2]
