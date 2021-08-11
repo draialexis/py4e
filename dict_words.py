@@ -3,6 +3,5 @@ words = dict()
 
 for line in fhand:
     for word in line.split():
-        words[word] = '_'
-
+        words[word] = words.get(word, 0) + 1
 print(words)
